@@ -8,9 +8,9 @@ This is very simple and very useful.
 
 
 ## Screenshots
-![Network1](screenshots/network1.png)
-![Hosts1](screenshots/hosts1.png")
-![Hosts2](screenshots/hosts2.png")
+![Network1](screenshots/Network1.png)
+![Hosts1](screenshots/Hosts1.png")
+![Hosts2](screenshots/Hosts2.png")
 
 
 ## Features
