@@ -2,17 +2,15 @@
 
 
 ## What is SimpleIPAM?
-SimpleIPAM is IP address management(IPAM) for Small and medium-sized enterprises.
-This can manage IP address and networks like VLAN.
-This is very simple and very useful.
+SimpleIPAM is IP address management(IPAM) for Small and medium-sized enterprises.  
+This can manage IP address and networks like VLAN.  
+This is very simple and very useful.  
 
 
 ## Screenshots
-![Network1](screenshots/Networks1.png)  
-  
-![Hosts1](screenshots/Hosts1.png)  
-  
-![Hosts2](screenshots/Hosts2.png)  
+![Network1](screenshots/Networks1.png)
+![Hosts1](screenshots/Hosts1.png)
+![Hosts2](screenshots/Hosts2.png)
 
 
 ## Features
@@ -45,8 +43,8 @@ This is very simple and very useful.
 
 ## Configuration
 ### Change Per Page
-Edit $config['per_page'] in controllers/Networks.php and controllers/Hosts.php
-For example, change  "5" to "300"
+Edit $config['per_page'] in controllers/Networks.php and controllers/Hosts.php  
+For example, change  "5" to "300"  
 
 ```
 public function index()
