@@ -1,0 +1,29 @@
+# sqlite3 ipam.db ".table"
+hosts     networks
+
+# sqlite3 ipam.db ".schema hosts"
+CREATE TABLE "hosts" (
+        `id`    INTEGER NOT NULL,
+        `ip_address`    TEXT NOT NULL UNIQUE,
+        `cidr`  INTEGER,
+        `status`        TEXT,
+        `hostname`      TEXT,
+        `model` TEXT,
+        `note`  TEXT,
+        PRIMARY KEY(`id`)
+);
+
+
+# sqlite3 ipam.db ".schema networks"
+CREATE TABLE "networks"(
+        `id`    INTEGER NOT NULL,
+        `networks`      TEXT NOT NULL UNIQUE,
+        `cidr`  INTEGER,
+        `broadcast_address`     TEXT,
+        `vlan_id`       INTEGER,
+        `note1` TEXT,
+        `note2` TEXT,
+        PRIMARY KEY(`id`)
+);
+
+#  sqlite3 ipam.db "select * from networks"
