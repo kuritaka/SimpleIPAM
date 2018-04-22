@@ -47,7 +47,7 @@
          <?php foreach($hosts as $host): ?>
          <tr>
              <td><?php echo $host['ip_address']; ?></td>
-             <td><?php echo $host['cidr']; ?></td>
+             <td><?php echo $host['subnet_mask']; ?></td>
              <td><?php echo $host['hostname']; ?></td>
              <td><?php echo $host['model']; ?></td>
              <td><?php echo $host['note']; ?></td>
@@ -151,7 +151,7 @@
         {
             $('[name="id"]').val(data.id);
             $('[name="ip_address"]').val(data.ip_address);
-            $('[name="cidr"]').val(data.cidr);
+            $('[name="subnet_mask"]').val(data.subnet_mask);
             $('[name="hostname"]').val(data.hostname);
             $('[name="model"]').val(data.model);
             $('[name="note"]').val(data.note);
@@ -264,9 +264,9 @@
               </div>
             </div>
             <div class="form-group">
-              <label class="control-label col-md-3">CIDR</label>
+              <label class="control-label col-md-3">Subnet mask</label>
               <div class="col-md-6">
-                <input name="cidr" placeholder="24" class="form-control" type="text">
+                <input name="subnet_mask" placeholder="255.255.255.0" class="form-control" type="text">
                 <span class="help-block"></span>
               </div>
               <div class="col-md-3">

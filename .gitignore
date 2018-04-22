@@ -1,6 +1,7 @@
 uploads/*.csv
 
 sqlite/*.db
+sqlite/*.db-journal
 
 application/cache/*
 !application/cache/index.html

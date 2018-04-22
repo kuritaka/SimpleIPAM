@@ -41,7 +41,7 @@
 <div class="col-sm-6">
 <p>CSV Example</p>
 <pre>
-"networks","cidr","broadcast_address","vlan_id","note1","note2"
+"networks","subnet_mask","broadcast_address","vlan_id","note1","note2"
 "192.168.2.0","24","192.168.2.255","13","test","TokyoDC"
 "192.168.3.0","24","192.168.3.255","14","test","TokyoDC"
 </pre>
@@ -104,7 +104,7 @@
     <div class="col-sm-6">
 <p>CSV Example</p>
 <pre>
-"ip_address","cidr","hostname","model","note"
+"ip_address","subnet_mask","hostname","model","note"
 "10.0.0.1","255.255.255.0","test-l3","CISCO Switch","sample"
 "10.0.2.2","24","test-host","HPE DL360 Gen9","aaaaa"
 "10.0.0.3","24","test-host","HPE DL360 Gen9","bbbb"

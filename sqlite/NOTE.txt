@@ -5,7 +5,7 @@ hosts     networks
 CREATE TABLE "hosts" (
         `id`    INTEGER NOT NULL,
         `ip_address`    TEXT NOT NULL UNIQUE,
-        `cidr`  INTEGER,
+        `subnet_mask`  INTEGER,
         `status`        TEXT,
         `hostname`      TEXT,
         `model` TEXT,
