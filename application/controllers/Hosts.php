@@ -150,7 +150,6 @@ class Hosts extends CI_Controller {
 				'ip_address' => $this->input->post('ip_address'),
 				'subnet_mask' => $this->input->post('subnet_mask'),
 				'hostname' => $this->input->post('hostname'),
-				'model' => $this->input->post('model'),
 				'note' => $this->input->post('note'),
 			);
 		$insert = $this->Ipam->hosts_add($data);
@@ -172,7 +171,6 @@ class Hosts extends CI_Controller {
 		'ip_address' => $this->input->post('ip_address'),
 		'subnet_mask' => $this->input->post('subnet_mask'),
 		'hostname' => $this->input->post('hostname'),
-		'model' => $this->input->post('model'),
 		'note' => $this->input->post('note'),
 		);
 	$this->Ipam->hosts_update(array('id' => $this->input->post('id')), $data);
@@ -265,7 +263,7 @@ class Hosts extends CI_Controller {
 		$delimiter = ",";
         $newline = "\r\n";
         $sql_order = " order by CAST(substr(trim(ip_address),1,instr(trim(ip_address),'.')-1) AS INTEGER), CAST(substr(substr(trim(ip_address),length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)) ,1, instr(substr(trim(ip_address),length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)),'.')-1) AS INTEGER), CAST(substr(substr(trim(ip_address),length(substr(substr(trim(ip_address),length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)) ,1, instr(substr(trim(ip_address),length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)),'.')))+length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)) ,1, instr(substr(trim(ip_address),length(substr(substr(trim(ip_address),length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)) ,1, instr(substr(trim(ip_address),length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)),'.')))+length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)),'.')-1) AS INTEGER), CAST(substr(trim(ip_address),length(substr(substr(trim(ip_address),length(substr(substr(trim(ip_address),length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)) ,1, instr(substr(trim(ip_address),length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)),'.')))+length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)) ,1, instr(substr(trim(ip_address),length(substr(substr(trim(ip_address),length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)) ,1, instr(substr(trim(ip_address),length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)),'.')))+length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)),'.')))+ length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+length(substr(substr(trim(ip_address),length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)) ,1, instr(substr(trim(ip_address),length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)),'.')))+1,length(trim(ip_address))) AS INTEGER) ";
-		$query = $this->db->query('SELECT ip_address, subnet_mask, hostname, model, note FROM hosts WHERE 1'.$sql_order);
+		$query = $this->db->query('SELECT ip_address, subnet_mask, hostname, note FROM hosts WHERE 1'.$sql_order);
 		$this->load->dbutil();
 		$data = $this->dbutil->csv_from_result($query, $delimiter, $newline);
 		$this->load->helper('download');
@@ -302,7 +300,6 @@ class Hosts extends CI_Controller {
                         'ip_address'=>$row['ip_address'],
                         'subnet_mask'=>$row['subnet_mask'],
 						'hostname'=>$row['hostname'],
-						'model'=>$row['model'],
 						'note'=>$row['note'],
                     );
                     $this->Ipam->hosts_insert_csv($insert_data);

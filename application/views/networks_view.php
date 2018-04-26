@@ -36,13 +36,13 @@
     <table id="table_id" class="table table-striped table-bordered" cellspacing="0" width="100%">
       <thead>
               <tr>
-                  <th>Networks</th>
-                  <th>CIDR</th>
-                  <th>Broadcast</ht>
-                  <th>VLAN ID</th>
+                  <th width="90px">Networks</th>
+                  <th width="60px">CIDR</th>
+                  <th width="90px">Broadcast</ht>
+                  <th width="60px">VLAN ID</th>
                   <th>Note1</th>
                   <th>Note2</th>
-                  <th>Operation</th>
+                  <th width="120px">Operation</th>
               </tr>
       </thead>
       <tbody>

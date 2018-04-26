@@ -35,12 +35,11 @@
     <table id="table_id" class="table table-striped table-bordered" cellspacing="0" width="100%">
       <thead>
          <tr>
-             <th>IP Address</th>
-             <th>Subnet mask</th>
-             <th>Hostname</th>
-             <th>Model</th>
+             <th width="100px">IP Address</th>
+             <th width="100px">Subnet mask</th>
+             <th>Host</th>
              <th>Note</th>
-             <th>Operation</th>
+             <th width="120px">Operation</th>
          </tr>
       </thead>
 
@@ -49,7 +48,6 @@
              <td><?php echo $host['ip_address']; ?></td>
              <td><?php echo $host['subnet_mask']; ?></td>
              <td><?php echo $host['hostname']; ?></td>
-             <td><?php echo $host['model']; ?></td>
              <td><?php echo $host['note']; ?></td>
              <td>
                   <button class="btn btn-warning btn-xs" onclick="edit_host(<?php echo $host['id'];?>)">
@@ -68,8 +66,7 @@
               <tr>
                   <th>IP Address</th>
                   <th>Subnet mask</th>
-                  <th>Hostname</th>
-                  <th>Model</th>
+                  <th>Host</th>
                   <th>Note</th>
                   <th>Operation</th>
               </tr>
@@ -153,7 +150,6 @@
             $('[name="ip_address"]').val(data.ip_address);
             $('[name="subnet_mask"]').val(data.subnet_mask);
             $('[name="hostname"]').val(data.hostname);
-            $('[name="model"]').val(data.model);
             $('[name="note"]').val(data.note);
 
             $('#modal_form').modal('show'); // show bootstrap modal when complete loaded
@@ -274,19 +270,13 @@
               </div>
             </div>
             <div class="form-group">
-              <label class="control-label col-md-3">Hostname</label>
+              <label class="control-label col-md-3">Host</label>
               <div class="col-md-6">
                 <input name="hostname" placeholder="test-server-01" class="form-control" type="text">
                 <span class="help-block"></span>
               </div>
               <div class="col-md-3">
                 <p class="text-left">*Required</p>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="control-label col-md-3">Model</label>
-              <div class="col-md-9">
-                 <input name="model" placeholder="HPE DL360 Gen9" class="form-control" type="text">
               </div>
             </div>
             <div class="form-group">

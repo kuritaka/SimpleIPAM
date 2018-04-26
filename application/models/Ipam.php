@@ -136,7 +136,7 @@ class Ipam extends CI_Model {
         if ($st == "NIL") $st = "";
         //$sql = "select * from hosts where ip_addr like '%$st%' limit " . $start . ", " . $limit;
         $sql1 = " select * from hosts where ip_address like '%$st%' ";
-        $sql2 = " or hostname like '%$st%' or model like '%$st%' or note like '%$st%' ";
+        $sql2 = " or hostname like '%$st%' or note like '%$st%' ";
         // https://stackoverflow.com/questions/23092783/best-way-to-sort-by-ip-addresses-in-sql
         //$sql_order = " order by ip_address ";
         //$sql_order = " order by CAST(substr(ip_address,1,instr(ip_address,'.')) AS NUMERIC) ";
@@ -153,7 +153,7 @@ class Ipam extends CI_Model {
         if ($st == "NIL") $st = "";
         //$sql = "select * from hosts where hosts like '%$st%'";
         $sql1 = "select * from hosts where ip_address like '%$st%' ";
-        $sql2 = " or hostname like '%$st%' or model like '%$st%' or note like '%$st%' ";
+        $sql2 = " or hostname like '%$st%' or note like '%$st%' ";
         $sql = "$sql1 $sql2";
         $query = $this->db->query($sql);
         return $query->num_rows();
@@ -164,7 +164,6 @@ class Ipam extends CI_Model {
         $str = urldecode($str); // for japanese
         $this->db->like('ip_address', "$str");
         $this->db->or_like('hostname', $str); 
-        $this->db->or_like('model', $str); 
         $this->db->or_like('note', $str); 
         $this->db->order_by("hosts", "ASC"); 
         $query = $this->db->get('hosts');
