@@ -21,7 +21,7 @@
           <?php echo form_close(); ?>
       </div>
       <div class="col-sm-6 text-right">
-        <button class="btn btn-success" onclick="add_hosts()"><i class="glyphicon glyphicon-plus"></i> Add Hosts</button>
+        <button class="btn btn-success" onclick="add_hosts()"><i class="glyphicon glyphicon-plus"></i> Add Host</button>
         <button class="btn btn-success" onclick="location.href='<?php echo site_url('hosts/csv')?>'">
           <i class="glyphicon glyphicon-retweet"></i> CSV Import/Export</button>
       </div>
@@ -130,7 +130,7 @@
       save_method = 'add';
       $('#form')[0].reset(); // reset form on modals
       $('#modal_form').modal('show'); // show bootstrap modal
-      $('.modal-title').text('Add Hosts'); // Set Title to Bootstrap modal title
+      $('.modal-title').text('Add Host'); // Set Title to Bootstrap modal title
     }
 
 

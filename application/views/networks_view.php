@@ -22,7 +22,7 @@
       </div>
       <div class="col-sm-6 text-right">
         <button class="btn btn-success" onclick="add_networks()">
-            <i class="glyphicon glyphicon-plus"></i> Add Networks</button>
+            <i class="glyphicon glyphicon-plus"></i> Add Network</button>
         <button class="btn btn-success" onclick="location.href='<?php echo site_url('networks/csv')?>'">
             <i class="glyphicon glyphicon-retweet"></i> CSV Import/Export</button>
       </div>
@@ -130,7 +130,7 @@
       save_method = 'add';
       $('#form')[0].reset(); // reset form on modals
       $('#modal_form').modal('show'); // show bootstrap modal
-      $('.modal-title').text('Add Networks'); // Set Title to Bootstrap modal title
+      $('.modal-title').text('Add Network'); // Set Title to Bootstrap modal title
     }
 
 

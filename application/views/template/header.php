@@ -48,7 +48,7 @@
           -->
          <form class="navbar-form navbar-left" action="<?php echo base_url('/') ?>hosts/search" method="post">
             <div class="form-group">
-              <input type="text" name="host_name" class="form-control" placeholder="Search Hosts"  value="<?php echo set_value('host_name', $host_name); ?>">
+              <input type="text" name="host_name" class="form-control" placeholder="Search for hosts"  value="<?php echo set_value('host_name', $host_name); ?>">
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
