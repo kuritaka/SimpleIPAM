@@ -64,3 +64,11 @@ function search()
   ....
 }
 ```
+
+
+## ChangeLog
+v2.0
+  * Delete Model Column in hosts
+
+v1.0
+  * First Release
