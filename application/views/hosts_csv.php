@@ -41,9 +41,12 @@
 <div class="col-sm-6">
 <p>CSV Example</p>
 <pre>
-"networks","subnet_mask","broadcast_address","vlan_id","note1","note2"
-"192.168.2.0","24","192.168.2.255","13","test","TokyoDC"
-"192.168.3.0","24","192.168.3.255","14","test","TokyoDC"
+"ip_address","subnet_mask","host","note"
+"10.0.0.1","255.255.255.0","test-l3","Global IP xx.xx.xx.xx"
+"10.0.0.3","255.255.255.0","test-host2","bbbb"
+"10.0.0.4","255.255.255.0","test-host3","bbbb"
+"10.0.0.5","255.255.255.0","test-host4","bbbb"
+"10.0.0.6","255.255.255.0","test-host5","bbbb"
 </pre>
     <ul>
     <li>networks column must be not null and unique.</li>
@@ -105,10 +108,12 @@
 <p>CSV Example</p>
 <pre>
 "ip_address","subnet_mask","host","note"
-"10.0.0.1","255.255.255.0","test-l3","sample"
-"10.0.2.2","24","test-host","aaaaa"
-"10.0.0.3","24","test-host","bbbb"
-"10.0.0.4","24","test-host","bbbb"
+"10.0.0.1","255.255.255.0","test-l3","Global IP xx.xx.xx.xx"
+"10.0.0.3","255.255.255.0","test-host2","bbbb"
+"10.0.0.4","255.255.255.0","test-host3","bbbb"
+"10.0.0.5","255.255.255.0","test-host4","bbbb"
+"10.0.0.6","255.255.255.0","test-host5","bbbb"
+"10.0.0.7","255.255.255.0","test-host6","bbbb"
 </pre>
     </div>
 </div>
