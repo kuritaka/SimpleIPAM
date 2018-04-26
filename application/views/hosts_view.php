@@ -47,7 +47,7 @@
          <tr>
              <td><?php echo $host['ip_address']; ?></td>
              <td><?php echo $host['subnet_mask']; ?></td>
-             <td><?php echo $host['hostname']; ?></td>
+             <td><?php echo $host['host']; ?></td>
              <td><?php echo $host['note']; ?></td>
              <td>
                   <button class="btn btn-warning btn-xs" onclick="edit_host(<?php echo $host['id'];?>)">
@@ -149,7 +149,7 @@
             $('[name="id"]').val(data.id);
             $('[name="ip_address"]').val(data.ip_address);
             $('[name="subnet_mask"]').val(data.subnet_mask);
-            $('[name="hostname"]').val(data.hostname);
+            $('[name="host"]').val(data.host);
             $('[name="note"]').val(data.note);
 
             $('#modal_form').modal('show'); // show bootstrap modal when complete loaded
@@ -272,7 +272,7 @@
             <div class="form-group">
               <label class="control-label col-md-3">Host</label>
               <div class="col-md-6">
-                <input name="hostname" placeholder="test-server-01" class="form-control" type="text">
+                <input name="host" placeholder="test-server-01" class="form-control" type="text">
                 <span class="help-block"></span>
               </div>
               <div class="col-md-3">

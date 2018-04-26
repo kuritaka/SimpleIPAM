@@ -104,11 +104,11 @@
     <div class="col-sm-6">
 <p>CSV Example</p>
 <pre>
-"ip_address","subnet_mask","hostname","model","note"
-"10.0.0.1","255.255.255.0","test-l3","CISCO Switch","sample"
-"10.0.2.2","24","test-host","HPE DL360 Gen9","aaaaa"
-"10.0.0.3","24","test-host","HPE DL360 Gen9","bbbb"
-"10.0.0.4","24","test-host","HPE DL360 Gen9","bbbb"
+"ip_address","subnet_mask","host","note"
+"10.0.0.1","255.255.255.0","test-l3","sample"
+"10.0.2.2","24","test-host","aaaaa"
+"10.0.0.3","24","test-host","bbbb"
+"10.0.0.4","24","test-host","bbbb"
 </pre>
     </div>
 </div>
