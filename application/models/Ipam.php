@@ -74,34 +74,34 @@ class Ipam extends CI_Model {
     }
 
 
-	public function networks_get_by_id($id)
-	{
+    public function networks_get_by_id($id)
+    {
         //$this->db->from($this->table);
         $this->db->from("networks");
-		$this->db->where('id',$id);
-		$query = $this->db->get();
+        $this->db->where('id',$id);
+        $query = $this->db->get();
  
-		return $query->row();
-	}
+        return $query->row();
+    }
  
-	public function networks_add($data)
-	{
-		$this->db->insert($this->table, $data);
-		return $this->db->insert_id();
-	}
+    public function networks_add($data)
+    {
+        $this->db->insert($this->table, $data);
+        return $this->db->insert_id();
+    }
  
-	public function networks_update($where, $data)
-	{
-		//$this->db->update($this->table, $data, $where);
-		$this->db->update("networks", $data, $where);
-		return $this->db->affected_rows();
-	}
+    public function networks_update($where, $data)
+    {
+        //$this->db->update($this->table, $data, $where);
+        $this->db->update("networks", $data, $where);
+        return $this->db->affected_rows();
+    }
  
-	public function networks_delete_by_id($id)
-	{
-		$this->db->where('id', $id);
-		$this->db->delete($this->table);
-	}
+    public function networks_delete_by_id($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete($this->table);
+    }
 
     public function networks_insert_csv($data) {
         $this->db->insert('networks', $data);
@@ -176,36 +176,36 @@ class Ipam extends CI_Model {
     }
 
 
-	public function hosts_get_by_id($id)
-	{
+    public function hosts_get_by_id($id)
+    {
         //$this->db->from($this->table);
         $this->db->from("hosts");
-		$this->db->where('id',$id);
-		$query = $this->db->get();
+        $this->db->where('id',$id);
+        $query = $this->db->get();
  
-		return $query->row();
-	}
+        return $query->row();
+    }
 
-	public function hosts_add($data)
-	{
+    public function hosts_add($data)
+    {
         //$this->db->insert($this->table, $data);
         $this->db->insert("hosts", $data);
-		return $this->db->insert_id();
-	}
+        return $this->db->insert_id();
+    }
  
-	public function hosts_update($where, $data)
-	{
-		//$this->db->update($this->table, $data, $where);
-		$this->db->update("hosts", $data, $where);
-		return $this->db->affected_rows();
-	}
+    public function hosts_update($where, $data)
+    {
+        //$this->db->update($this->table, $data, $where);
+        $this->db->update("hosts", $data, $where);
+        return $this->db->affected_rows();
+    }
 
-	public function hosts_delete_by_id($id)
-	{
-		$this->db->where('id', $id);
+    public function hosts_delete_by_id($id)
+    {
+        $this->db->where('id', $id);
         //$this->db->delete($this->table);
         $this->db->delete("hosts");
-	}
+    }
 
     public function hosts_insert_csv($data) {
         $this->db->insert('hosts', $data);

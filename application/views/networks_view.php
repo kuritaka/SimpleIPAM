@@ -38,7 +38,7 @@
               <tr>
                   <th width="90px">Networks</th>
                   <th width="60px">CIDR</th>
-                  <th width="90px">Broadcast</ht>
+                  <th width="90px">Broadcast</th>
                   <th width="60px">VLAN ID</th>
                   <th>Note1</th>
                   <th>Note2</th>
@@ -70,7 +70,7 @@
            <tr>
                <th>Networks</th>
                <th>CIDR</th>
-               <th>Broadcast</ht>
+               <th>Broadcast</th>
                <th>VLAN ID</th>
                <th>Note1</th>
                <th>Note2</th>
