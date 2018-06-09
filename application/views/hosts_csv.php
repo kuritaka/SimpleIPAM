@@ -53,7 +53,7 @@
 "10.0.0.6","255.255.255.0","test-host5","bbbb"
             </pre>
             <ul>
-                <li>networks column must be not null and unique.</li>
+                <li>hosts column must be not null and unique.</li>
                 <li>CSV Import isn't work validation.</li>
             </ul>
         </div>
