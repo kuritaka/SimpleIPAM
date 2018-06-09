@@ -34,7 +34,7 @@ class Networks extends CI_Controller
         $config['base_url'] = site_url("networks/search/NIL");
         $config['total_rows'] = $this->db->count_all('networks');
         $data['total_rows'] = $config['total_rows'];
-        $config['per_page'] = "5";
+        $config['per_page'] = "10";
         $config["uri_segment"] = 4;
         $choice = $config["total_rows"] / $config["per_page"];
         $config["num_links"] = floor($choice);
