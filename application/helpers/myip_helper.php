@@ -13,7 +13,7 @@
  */
 
    /**
-     * get only host address from IP adress
+     * get only host address from IP address
      *
      * @access  private
      * @return  void

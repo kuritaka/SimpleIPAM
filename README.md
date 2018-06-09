@@ -9,11 +9,11 @@ This is very simple and very useful.
 
 ## Screenshots
 #### Screenshot1
-![Network1](screenshots/Networks1.png)
+![Network1](_doc/screenshots/Networks1.png)
 #### Screenshot2
-![Hosts1](screenshots/Hosts1.png)
+![Hosts1](_doc/screenshots/Hosts1.png)
 #### Screenshot3
-![Hosts2](screenshots/Hosts2.png)
+![Hosts2](_doc/screenshots/Hosts2.png)
 
 
 ## Features
@@ -24,7 +24,7 @@ This is very simple and very useful.
 
 ## Dependencies
 * PHP >= 5.3.7 (recommends PHP 5.4 or newer)
-* Apache (Nginx etc)
+* Apache
 * SQLite3
 
 ## Using
@@ -40,7 +40,7 @@ This is very simple and very useful.
 
 ## Installation
 - Download SimpeIPAM with GitHub
-- Upload SimpeIPAM in Document Root in Nginx # /var/www/html/simpleipam
+- Upload SimpeIPAM in Document Root in Apache # /var/www/html/simpleipam
 - Copy ipam.db.sample to ipam.db   # sqlite/ipam.db
 
 
