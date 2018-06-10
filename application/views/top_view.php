@@ -9,9 +9,9 @@
     <p>SimpleIPAM is IP address management(IPAM) for Small and medium-sized enterprises.<br>
         This can manage IP address and networks like VLAN.<br>
         This is very simple and very useful.</p>
-    <!--
+    <!-- -->
     <p><a href="https://github.com/kuritaka/SimpleIPAM" target="_blank">https://github.com/kuritaka/SimpleIPAM</a></p>
-    -->
+    <!-- -->
 
     <br/>
     <h3>SiteMap</h3>
