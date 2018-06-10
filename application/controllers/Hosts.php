@@ -102,7 +102,7 @@ class Hosts extends CI_Controller
         $config = array();
         $config['base_url'] = site_url("hosts/search/$search");
         $config['total_rows'] = $this->Ipam->get_hosts_count($search);
-        $config['per_page'] = "5";
+        $config['per_page'] = "20";
         $config["uri_segment"] = 4;
         $choice = $config["total_rows"] / $config["per_page"];
         $config["num_links"] = floor($choice);
@@ -155,6 +155,9 @@ class Hosts extends CI_Controller
             'subnet_mask' => $this->input->post('subnet_mask'),
             'host' => $this->input->post('host'),
             'note' => $this->input->post('note'),
+            'public_ip' => $this->input->post('public_ip'),
+            'state' => $this->input->post('state'),
+            'spec' => $this->input->post('spec'),
         );
         $insert = $this->Ipam->hosts_add($data);
         echo json_encode(array("status" => TRUE));
@@ -176,6 +179,9 @@ class Hosts extends CI_Controller
             'subnet_mask' => $this->input->post('subnet_mask'),
             'host' => $this->input->post('host'),
             'note' => $this->input->post('note'),
+            'public_ip' => $this->input->post('public_ip'),
+            'state' => $this->input->post('state'),
+            'spec' => $this->input->post('spec'),
         );
         $this->Ipam->hosts_update(array('id' => $this->input->post('id')), $data);
         echo json_encode(array("status" => TRUE));
@@ -263,7 +269,7 @@ class Hosts extends CI_Controller
         $delimiter = ",";
         $newline = "\r\n";
         $sql_order = " order by CAST(substr(trim(ip_address),1,instr(trim(ip_address),'.')-1) AS INTEGER), CAST(substr(substr(trim(ip_address),length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)) ,1, instr(substr(trim(ip_address),length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)),'.')-1) AS INTEGER), CAST(substr(substr(trim(ip_address),length(substr(substr(trim(ip_address),length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)) ,1, instr(substr(trim(ip_address),length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)),'.')))+length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)) ,1, instr(substr(trim(ip_address),length(substr(substr(trim(ip_address),length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)) ,1, instr(substr(trim(ip_address),length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)),'.')))+length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)),'.')-1) AS INTEGER), CAST(substr(trim(ip_address),length(substr(substr(trim(ip_address),length(substr(substr(trim(ip_address),length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)) ,1, instr(substr(trim(ip_address),length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)),'.')))+length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)) ,1, instr(substr(trim(ip_address),length(substr(substr(trim(ip_address),length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)) ,1, instr(substr(trim(ip_address),length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)),'.')))+length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)),'.')))+ length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+length(substr(substr(trim(ip_address),length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)) ,1, instr(substr(trim(ip_address),length(substr(trim(ip_address),1,instr(trim(ip_address),'.')))+1,length(ip_address)),'.')))+1,length(trim(ip_address))) AS INTEGER) ";
-        $query = $this->db->query('SELECT ip_address, subnet_mask, host, note FROM hosts WHERE 1' . $sql_order);
+        $query = $this->db->query('SELECT ip_address, subnet_mask, host, note, public_ip, state, spec FROM hosts WHERE 1' . $sql_order);
         $this->load->dbutil();
         $data = $this->dbutil->csv_from_result($query, $delimiter, $newline);
         $this->load->helper('download');
@@ -302,6 +308,9 @@ class Hosts extends CI_Controller
                         'subnet_mask' => $row['subnet_mask'],
                         'host' => $row['host'],
                         'note' => $row['note'],
+                        'public_ip' => $row['public_ip'],
+                        'state' => $row['state'],
+                        'spec' => $row['spec'],
                     );
                     $this->Ipam->hosts_insert_csv($insert_data);
                 }

@@ -102,7 +102,7 @@ class Networks extends CI_Controller
         $config = array();
         $config['base_url'] = site_url("networks/search/$search");
         $config['total_rows'] = $this->Ipam->get_networks_count($search);
-        $config['per_page'] = "5";
+        $config['per_page'] = "10";
         $config["uri_segment"] = 4;
         $choice = $config["total_rows"] / $config["per_page"];
         $config["num_links"] = floor($choice);
@@ -157,6 +157,7 @@ class Networks extends CI_Controller
             'vlan_id' => $this->input->post('vlan_id'),
             'note1' => $this->input->post('note1'),
             'note2' => $this->input->post('note2'),
+            'note3' => $this->input->post('note3'),
         );
         $insert = $this->Ipam->networks_add($data);
         echo json_encode(array("status" => TRUE));
@@ -180,6 +181,7 @@ class Networks extends CI_Controller
             'vlan_id' => $this->input->post('vlan_id'),
             'note1' => $this->input->post('note1'),
             'note2' => $this->input->post('note2'),
+            'note3' => $this->input->post('note3'),
         );
         $this->Ipam->networks_update(array('id' => $this->input->post('id')), $data);
         echo json_encode(array("status" => TRUE));
@@ -262,7 +264,7 @@ class Networks extends CI_Controller
         $delimiter = ",";
         $newline = "\r\n";
         $sql_order = " order by CAST(substr(trim(networks),1,instr(trim(networks),'.')-1) AS INTEGER), CAST(substr(substr(trim(networks),length(substr(trim(networks),1,instr(trim(networks),'.')))+1,length(networks)) ,1, instr(substr(trim(networks),length(substr(trim(networks),1,instr(trim(networks),'.')))+1,length(networks)),'.')-1) AS INTEGER), CAST(substr(substr(trim(networks),length(substr(substr(trim(networks),length(substr(trim(networks),1,instr(trim(networks),'.')))+1,length(networks)) ,1, instr(substr(trim(networks),length(substr(trim(networks),1,instr(trim(networks),'.')))+1,length(networks)),'.')))+length(substr(trim(networks),1,instr(trim(networks),'.')))+1,length(networks)) ,1, instr(substr(trim(networks),length(substr(substr(trim(networks),length(substr(trim(networks),1,instr(trim(networks),'.')))+1,length(networks)) ,1, instr(substr(trim(networks),length(substr(trim(networks),1,instr(trim(networks),'.')))+1,length(networks)),'.')))+length(substr(trim(networks),1,instr(trim(networks),'.')))+1,length(networks)),'.')-1) AS INTEGER), CAST(substr(trim(networks),length(substr(substr(trim(networks),length(substr(substr(trim(networks),length(substr(trim(networks),1,instr(trim(networks),'.')))+1,length(networks)) ,1, instr(substr(trim(networks),length(substr(trim(networks),1,instr(trim(networks),'.')))+1,length(networks)),'.')))+length(substr(trim(networks),1,instr(trim(networks),'.')))+1,length(networks)) ,1, instr(substr(trim(networks),length(substr(substr(trim(networks),length(substr(trim(networks),1,instr(trim(networks),'.')))+1,length(networks)) ,1, instr(substr(trim(networks),length(substr(trim(networks),1,instr(trim(networks),'.')))+1,length(networks)),'.')))+length(substr(trim(networks),1,instr(trim(networks),'.')))+1,length(networks)),'.')))+ length(substr(trim(networks),1,instr(trim(networks),'.')))+length(substr(substr(trim(networks),length(substr(trim(networks),1,instr(trim(networks),'.')))+1,length(networks)) ,1, instr(substr(trim(networks),length(substr(trim(networks),1,instr(trim(networks),'.')))+1,length(networks)),'.')))+1,length(trim(networks))) AS INTEGER) ";
-        $query = $this->db->query('SELECT networks, cidr, broadcast_address, vlan_id, note1, note2 FROM networks WHERE 1' . $sql_order);
+        $query = $this->db->query('SELECT networks, cidr, broadcast_address, vlan_id, note1, note2, note3 FROM networks WHERE 1' . $sql_order);
         $this->load->dbutil();
         $data = $this->dbutil->csv_from_result($query, $delimiter, $newline);
         $this->load->helper('download');
@@ -303,6 +305,7 @@ class Networks extends CI_Controller
                         'vlan_id' => $row['vlan_id'],
                         'note1' => $row['note1'],
                         'note2' => $row['note2'],
+                        'note3' => $row['note3'],
                     );
                     $this->Ipam->networks_insert_csv($insert_data);
                 }
@@ -354,6 +357,7 @@ class Networks extends CI_Controller
                         'vlan_id' => $row['vlan_id'],
                         'note1' => $row['note1'],
                         'note2' => $row['note2'],
+                        'note3' => $row['note3'],
                     );
                     $this->Ipam->networks_insert_csv($insert_data);
                 }

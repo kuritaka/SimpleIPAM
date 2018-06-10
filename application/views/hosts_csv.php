@@ -45,12 +45,12 @@
         <div class="col-sm-6">
             <p>CSV Example</p>
             <pre>
-"ip_address","subnet_mask","host","note"
-"10.0.0.1","255.255.255.0","test-l3","Global IP xx.xx.xx.xx"
-"10.0.0.3","255.255.255.0","test-host2","bbbb"
-"10.0.0.4","255.255.255.0","test-host3","bbbb"
-"10.0.0.5","255.255.255.0","test-host4","bbbb"
-"10.0.0.6","255.255.255.0","test-host5","bbbb"
+"ip_address","subnet_mask","host","note","public_ip","state","spec"
+"10.0.0.1","255.255.255.0","test-l3","L3SW","xx.xx.xx.xx","Running","1Gbps"
+"10.0.0.3","255.255.255.0","test-host2","bbbb","xx.xx.xx.xx","Running","CPU:2Core, Memory:2G, Disk:10G"
+"10.0.0.4","255.255.255.0","test-host3","bbbb","xx.xx.xx.xx","Running","CPU:2Core, Memory:2G, Disk:10G"
+"10.0.0.5","255.255.255.0","test-host4","bbbb","xx.xx.xx.xx","Running","CPU:2Core, Memory:2G, Disk:10G"
+"10.0.0.6","255.255.255.0","test-host5","bbbb","xx.xx.xx.xx","Running","CPU:2Core, Memory:2G, Disk:10G"
             </pre>
             <ul>
                 <li>hosts column must be not null and unique.</li>
@@ -84,13 +84,12 @@
         <div class="col-sm-6">
             <p>CSV Example</p>
             <pre>
-"ip_address","subnet_mask","host","note"
-"10.0.0.1","255.255.255.0","test-l3","Global IP xx.xx.xx.xx"
-"10.0.0.3","255.255.255.0","test-host2","bbbb"
-"10.0.0.4","255.255.255.0","test-host3","bbbb"
-"10.0.0.5","255.255.255.0","test-host4","bbbb"
-"10.0.0.6","255.255.255.0","test-host5","bbbb"
-"10.0.0.7","255.255.255.0","test-host6","bbbb"
+"ip_address","subnet_mask","host","note","public_ip","state","spec"
+"10.0.0.1","255.255.255.0","test-l3","L3SW","xx.xx.xx.xx","Running","1Gbps"
+"10.0.0.3","255.255.255.0","test-host2","bbbb","xx.xx.xx.xx","Running","CPU:2Core, Memory:2G, Disk:10G"
+"10.0.0.4","255.255.255.0","test-host3","bbbb","xx.xx.xx.xx","Running","CPU:2Core, Memory:2G, Disk:10G"
+"10.0.0.5","255.255.255.0","test-host4","bbbb","xx.xx.xx.xx","Running","CPU:2Core, Memory:2G, Disk:10G"
+"10.0.0.6","255.255.255.0","test-host5","bbbb","xx.xx.xx.xx","Running","CPU:2Core, Memory:2G, Disk:10G"
             </pre>
         </div>
     </div>

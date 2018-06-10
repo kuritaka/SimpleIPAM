@@ -38,10 +38,13 @@
     <table id="table_id" class="table table-striped table-bordered" cellspacing="0" width="100%">
         <thead>
         <tr>
-            <th width="100px">IP Address</th>
-            <th width="100px">Subnet mask</th>
-            <th>Host</th>
-            <th>Note</th>
+            <th width="90px">IP Address</th>
+            <th width="90px">Subnet mask</th>
+            <th width="120px">Host[Name]</th>
+            <th width="100px">Note[Purpose]</th>
+            <th width="80px">Public IP</th>
+            <th width="60px">State</th>
+            <th>Spec</th>
             <th width="120px">Operation</th>
         </tr>
         </thead>
@@ -52,6 +55,9 @@
                 <td><?php echo $host['subnet_mask']; ?></td>
                 <td><?php echo $host['host']; ?></td>
                 <td><?php echo $host['note']; ?></td>
+                <td><?php echo $host['public_ip']; ?></td>
+                <td><?php echo $host['state']; ?></td>
+                <td><?php echo $host['spec']; ?></td>
                 <td>
                     <button class="btn btn-warning btn-xs" onclick="edit_host(<?php echo $host['id']; ?>)">
                         <i class="glyphicon glyphicon-pencil"></i> Edit
@@ -69,8 +75,11 @@
         <tr>
             <th>IP Address</th>
             <th>Subnet mask</th>
-            <th>Host</th>
-            <th>Note</th>
+            <th>Host[Name]</th>
+            <th>Note[Purpose]</th>
+            <th>Public IP</th>
+            <th>State</th>
+            <th>Spec</th>
             <th>Operation</th>
         </tr>
         </tfoot>
@@ -150,6 +159,9 @@
                 $('[name="subnet_mask"]').val(data.subnet_mask);
                 $('[name="host"]').val(data.host);
                 $('[name="note"]').val(data.note);
+                $('[name="public_ip"]').val(data.public_ip);
+                $('[name="state"]').val(data.state);
+                $('[name="spec"]').val(data.spec);
 
                 $('#modal_form').modal('show'); // show bootstrap modal when complete loaded
                 $('.modal-title').text('Edit Host'); // Set title to Bootstrap modal title
@@ -255,7 +267,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3">Host</label>
+                            <label class="control-label col-md-3">Host[Name]</label>
                             <div class="col-md-6">
                                 <input name="host" placeholder="test-server-01" class="form-control" type="text">
                                 <span class="help-block"></span>
@@ -265,9 +277,27 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3">Note</label>
+                            <label class="control-label col-md-3">Note[Purpose]</label>
                             <div class="col-md-9">
                                 <input name="note" placeholder="" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Public IP</label>
+                            <div class="col-md-9">
+                                <input name="public_ip" placeholder="" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">State</label>
+                            <div class="col-md-9">
+                                <input name="state" placeholder="" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Spec</label>
+                            <div class="col-md-9">
+                                <input name="spec" placeholder="" class="form-control" type="text">
                             </div>
                         </div>
 
