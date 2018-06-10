@@ -1,11 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Top extends CI_Controller
+class Private_address extends CI_Controller
 {
 
     /**
-     * Top constructor.
+     * Private_address constructor.
      */
     function __construct()
     {
@@ -31,12 +31,10 @@ class Top extends CI_Controller
     {
         $data["host_name"] = "";     //this is form in header
 
-        $data['title'] = 'SimpleIPAM Top';
+        $data['title'] = 'SimpleIPAM Private Address Note';
         $this->load->view('template/header', $data);
-        $this->load->view('top_view');
+        $this->load->view('private_address_view');
         $this->load->view('template/footer');
-
-
     }
 
 }
