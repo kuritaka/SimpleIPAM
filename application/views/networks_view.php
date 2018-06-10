@@ -43,8 +43,8 @@
             <th width="90px">Networks</th>
             <th width="40px">CIDR</th>
             <th width="80px">Broadcast</th>
-            <th width="50px">VLAN ID</th>
-            <th width="140px">Note1[Identifier]</th>
+            <th width="60px">VLAN ID</th>
+            <th width="150px">Note1[Identifier]</th>
             <th width="60px">Note2[Zone]</th>
             <th>Note3[Others]</th>
             <th width="120px">Operation</th>
