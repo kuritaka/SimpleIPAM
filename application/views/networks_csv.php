@@ -45,9 +45,9 @@
         <div class="col-sm-6">
             <p>CSV Example</p>
             <pre>
-"networks","cidr","broadcast_address","vlan_id","note1","note2"
-"192.168.2.0","24","192.168.2.255","13","test","TokyoDC"
-"192.168.3.0","24","192.168.3.255","14","test","TokyoDC"
+"networks","cidr","broadcast_address","vlan_id","note1","note2","note3"
+"192.168.2.0","24","192.168.2.255","13","test","Tokyo","DC"
+"192.168.3.0","24","192.168.3.255","14","test","Tokyo","DC"
 </pre>
             <ul>
                 <li>networks column must be not null and unique.</li>
@@ -81,9 +81,9 @@
         <div class="col-sm-6">
             <p>CSV Example</p>
             <pre>
-"networks","cidr","broadcast_address","vlan_id","note1","note2"
-"192.168.2.0","24","192.168.2.255","13","test","TokyoDC"
-"192.168.3.0","24","192.168.3.255","14","test","TokyoDC"
+"networks","cidr","broadcast_address","vlan_id","note1","note2","note3"
+"192.168.2.0","24","192.168.2.255","13","test","Tokyo","DC"
+"192.168.3.0","24","192.168.3.255","14","test","Tokyo","DC"
 </pre>
         </div>
     </div>

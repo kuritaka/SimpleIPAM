@@ -34,7 +34,7 @@ class Ipam extends CI_Model
         //$sql = "select * from networks where networks like '%$st%' limit " . $start . ", " . $limit;
         $sql1 = " select * from networks where networks like '%$st%' ";
         $sql2 = " or cidr like '%$st%' or broadcast_address like '%$st%' or vlan_id like '%$st%' ";
-        $sql3 = " or note1 like '%$st%' or note2 like '%$st%' ";
+        $sql3 = " or note1 like '%$st%' or note2 like '%$st%' or note3 like '%$st%' ";
         //https://stackoverflow.com/questions/23092783/best-way-to-sort-by-ip-addresses-in-sql
         //$sql_order = " order by networks ";
         //$sql_order = " order by CAST(substr(networks,1,instr(networks,'.')) AS NUMERIC) ";
@@ -51,7 +51,7 @@ class Ipam extends CI_Model
         //$sql = "select * from networks where networks like '%$st%'";
         $sql1 = "select * from networks where networks like '%$st%' ";
         $sql2 = "or cidr like '%$st%' or broadcast_address like '%$st%' or vlan_id like '%$st%' ";
-        $sql3 = "or note1 like '%$st%' or note2 like '%$st%' ";
+        $sql3 = "or note1 like '%$st%' or note2 like '%$st%' or note3 like '%$st%' ";
         $sql = "$sql1 $sql2 $sql3";
         $query = $this->db->query($sql);
         return $query->num_rows();
@@ -64,6 +64,7 @@ class Ipam extends CI_Model
         $this->db->like('networks', "$str");
         $this->db->or_like('note1', $str);
         $this->db->or_like('note2', $str);
+        $this->db->or_like('note3', $str);
         $this->db->order_by("networks", "ASC");
         $query = $this->db->get('networks');
 

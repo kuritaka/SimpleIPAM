@@ -21,7 +21,12 @@ CREATE TABLE "networks"(
         `vlan_id`       INTEGER,
         `note1` TEXT,
         `note2` TEXT,
+        `note3` TEXT,
         PRIMARY KEY(`id`)
 );
-
-#  sqlite3 ipam.db "select * from networks"
+/*
+ * note1 : Use for identifier of the network.
+ * note2 : Use for zone/location of the network.
+ * note3 : Use for another info of the network.
+ */
+# sqlite3 ipam.db "select * from networks"

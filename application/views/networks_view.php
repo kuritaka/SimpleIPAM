@@ -46,6 +46,7 @@
             <th width="60px">VLAN ID</th>
             <th>Note1</th>
             <th>Note2</th>
+            <th>Note3</th>
             <th width="120px">Operation</th>
         </tr>
         </thead>
@@ -58,6 +59,7 @@
                 <td><?php echo $network['vlan_id']; ?></td>
                 <td><?php echo $network['note1']; ?></td>
                 <td><?php echo $network['note2']; ?></td>
+                <td><?php echo $network['note3']; ?></td>
                 <td>
                     <button class="btn btn-warning btn-xs" onclick="edit_network(<?php echo $network['id']; ?>)">
                         <i class="glyphicon glyphicon-pencil"></i> Edit
@@ -78,6 +80,7 @@
             <th>VLAN ID</th>
             <th>Note1</th>
             <th>Note2</th>
+            <th>Note3</th>
             <th>Operation</th>
         </tr>
         </tfoot>
@@ -157,6 +160,7 @@
                 $('[name="vlan_id"]').val(data.vlan_id);
                 $('[name="note1"]').val(data.note1);
                 $('[name="note2"]').val(data.note2);
+                $('[name="note3"]').val(data.note3);
 
                 $('#modal_form').modal('show'); // show bootstrap modal when complete loaded
                 $('.modal-title').text('Edit Networks'); // Set title to Bootstrap modal title
@@ -291,7 +295,13 @@
                         <div class="form-group">
                             <label class="control-label col-md-3">Note2</label>
                             <div class="col-md-9">
-                                <input name="note2" placeholder="Tokyo DC" class="form-control" type="text">
+                                <input name="note2" placeholder="Tokyo" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Note3</label>
+                            <div class="col-md-9">
+                                <input name="note3" placeholder="DC" class="form-control" type="text">
                             </div>
                         </div>
 
