@@ -39,8 +39,8 @@
         <thead>
         <tr>
             <th width="90px">IP Address</th>
-            <th width="80px">Subnet mask</th>
-            <th width="140px">Host[Name]</th>
+            <th width="90px">Subnet mask</th>
+            <th width="120px">Host[Name]</th>
             <th width="100px">Note[Purpose]</th>
             <th width="80px">Public IP</th>
             <th width="60px">State</th>
