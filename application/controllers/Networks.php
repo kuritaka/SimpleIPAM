@@ -102,7 +102,7 @@ class Networks extends CI_Controller
         $config = array();
         $config['base_url'] = site_url("networks/search/$search");
         $config['total_rows'] = $this->Ipam->get_networks_count($search);
-        $config['per_page'] = "5";
+        $config['per_page'] = "10";
         $config["uri_segment"] = 4;
         $choice = $config["total_rows"] / $config["per_page"];
         $config["num_links"] = floor($choice);

@@ -102,7 +102,7 @@ class Hosts extends CI_Controller
         $config = array();
         $config['base_url'] = site_url("hosts/search/$search");
         $config['total_rows'] = $this->Ipam->get_hosts_count($search);
-        $config['per_page'] = "5";
+        $config['per_page'] = "20";
         $config["uri_segment"] = 4;
         $choice = $config["total_rows"] / $config["per_page"];
         $config["num_links"] = floor($choice);
