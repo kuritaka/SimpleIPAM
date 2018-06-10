@@ -38,4 +38,8 @@ CREATE TABLE "networks"(
  * note3 : Use for another info of the network.
  */
 
+
+
+# sqlite3 ipam.db "select * from hosts"
+
 # sqlite3 ipam.db "select * from networks"

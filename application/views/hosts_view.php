@@ -38,12 +38,12 @@
     <table id="table_id" class="table table-striped table-bordered" cellspacing="0" width="100%">
         <thead>
         <tr>
-            <th width="100px">IP Address</th>
-            <th width="100px">Subnet mask</th>
-            <th>Host[Name]</th>
-            <th>Note[Purpose]</th>
-            <th>Public IP</th>
-            <th>State</th>
+            <th width="90px">IP Address</th>
+            <th width="80px">Subnet mask</th>
+            <th width="140px">Host[Name]</th>
+            <th width="100px">Note[Purpose]</th>
+            <th width="80px">Public IP</th>
+            <th width="60px">State</th>
             <th>Spec</th>
             <th width="120px">Operation</th>
         </tr>

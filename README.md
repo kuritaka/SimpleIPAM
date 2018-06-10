@@ -54,7 +54,7 @@ And adjust settings properly..
 
 ### Enable `log_message`
 Edit $config['log_threshold'] in config/config.php  
-(If need, set $config['log_path'], $config['log_file_extension'] properly. 
+(If need, set $config['log_path'], $config['log_file_extension'] properly.  
  Pay attention to the permissions of log file output directory.)  
 For example, change "0" to "1 :Error Messages (including PHP errors)"
 
