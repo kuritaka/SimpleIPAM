@@ -40,8 +40,8 @@
         <tr>
             <th width="100px">IP Address</th>
             <th width="100px">Subnet mask</th>
-            <th>Host</th>
-            <th>Note</th>
+            <th>Host[Name]</th>
+            <th>Note[Purpose]</th>
             <th>Public IP</th>
             <th>State</th>
             <th>Spec</th>
@@ -285,19 +285,19 @@
                         <div class="form-group">
                             <label class="control-label col-md-3">Public IP</label>
                             <div class="col-md-9">
-                                <input name="note" placeholder="" class="form-control" type="text">
+                                <input name="public_ip" placeholder="" class="form-control" type="text">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-3">State</label>
                             <div class="col-md-9">
-                                <input name="note" placeholder="" class="form-control" type="text">
+                                <input name="state" placeholder="" class="form-control" type="text">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-3">Spec</label>
                             <div class="col-md-9">
-                                <input name="note" placeholder="" class="form-control" type="text">
+                                <input name="spec" placeholder="" class="form-control" type="text">
                             </div>
                         </div>
 
