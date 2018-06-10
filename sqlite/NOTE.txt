@@ -8,9 +8,17 @@ CREATE TABLE `hosts` (
 	`subnet_mask`	TEXT,
 	`host`	TEXT,
 	`note`	TEXT,
+	`public_ip`	TEXT,
+	`state`	TEXT,
+	`spec`	TEXT,
 	PRIMARY KEY(`id`)
 );
-
+/*
+ * host  : Name (Identifier)
+ * note  : System, Role, OS/Middleware:(version)
+ * state : Running / Stopped, Deleted, Returned, Disposed.
+ * spec  : CPU/Memory/Disk, Instance type, ..
+ */
 
 # sqlite3 ipam.db ".schema networks"
 CREATE TABLE "networks"(
@@ -29,4 +37,5 @@ CREATE TABLE "networks"(
  * note2 : Use for zone/location of the network.
  * note3 : Use for another info of the network.
  */
+
 # sqlite3 ipam.db "select * from networks"
