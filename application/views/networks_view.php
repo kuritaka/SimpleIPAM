@@ -41,12 +41,12 @@
         <thead>
         <tr>
             <th width="90px">Networks</th>
-            <th width="60px">CIDR</th>
-            <th width="90px">Broadcast</th>
-            <th width="60px">VLAN ID</th>
-            <th>Note1</th>
-            <th>Note2</th>
-            <th>Note3</th>
+            <th width="40px">CIDR</th>
+            <th width="80px">Broadcast</th>
+            <th width="40px">VLAN ID</th>
+            <th width="120px">Note1[Identifier]</th>
+            <th width="60px">Note2[Zone]</th>
+            <th>Note3[Others]</th>
             <th width="120px">Operation</th>
         </tr>
         </thead>
@@ -78,9 +78,9 @@
             <th>CIDR</th>
             <th>Broadcast</th>
             <th>VLAN ID</th>
-            <th>Note1</th>
-            <th>Note2</th>
-            <th>Note3</th>
+            <th>Note1[Identifier]</th>
+            <th>Note2[Zone]</th>
+            <th>Note3[Others]</th>
             <th>Operation</th>
         </tr>
         </tfoot>
@@ -286,20 +286,20 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3">Note1</label>
+                            <label class="control-label col-md-3">Note1[Identifier]</label>
                             <div class="col-md-9">
                                 <input name="note1" placeholder="Production DMZ Operation" class="form-control"
                                        type="text">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3">Note2</label>
+                            <label class="control-label col-md-3">Note2[Zone]</label>
                             <div class="col-md-9">
                                 <input name="note2" placeholder="Tokyo" class="form-control" type="text">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3">Note3</label>
+                            <label class="control-label col-md-3">Note3[Others]</label>
                             <div class="col-md-9">
                                 <input name="note3" placeholder="DC" class="form-control" type="text">
                             </div>
