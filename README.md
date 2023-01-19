@@ -39,8 +39,8 @@ This is very simple and very useful.
 
 
 ## Installation
-- Download SimpeIPAM with GitHub
-- Upload SimpeIPAM in Document Root in Nginx # /var/www/html/simpleipam
+- Download SimpleIPAM with GitHub
+- Upload SimpleIPAM in Document Root in Nginx # /var/www/html/simpleipam
 - Copy ipam.db.sample to ipam.db   # sqlite/ipam.db
 
 
